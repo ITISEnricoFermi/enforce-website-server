@@ -1,0 +1,11 @@
+{
+  "name": "enforce-website-server",
+  "version": "1.0.0",
+  "description": "🔗 Website for Enforce Team - CanSat 2018 🔗",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Riccardo Sangiorgio <richard.sangiorgio@gmail.com>",
+  "license": "MIT"
+}
