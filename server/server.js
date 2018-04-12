@@ -23,6 +23,11 @@ io.on('connection', (socket) => {
   // socket.on('event', () => {
   //   io.emit('event')
   // })
+
+  socket.on('data', (data) => {
+    console.log(data)
+    io.emit('data')
+  })
 })
 
 app.use((err, req, res, next) => {
