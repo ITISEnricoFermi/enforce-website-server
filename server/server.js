@@ -24,9 +24,24 @@ io.on('connection', (socket) => {
   //   io.emit('event')
   // })
 
-  socket.on('data', (data) => {
-    console.log(data)
-    io.emit('data')
+  socket.on('temperature', (temperature) => {
+    socket.broadcast.emit('temperature', temperature)
+  })
+
+  socket.on('humidity', (humidity) => {
+    socket.broadcast.emit('humidity', humidity)
+  })
+
+  socket.on('pressure', (pressure) => {
+    socket.broadcast.emit('pressure', pressure)
+  })
+
+  socket.on('position', (position) => {
+    socket.broadcast.emit('position', position)
+  })
+
+  socket.on('orientation', (orientation) => {
+    socket.broadcast.emit('orientation', orientation)
   })
 })
 
