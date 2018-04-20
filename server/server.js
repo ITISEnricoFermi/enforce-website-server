@@ -26,6 +26,7 @@ io.on('connection', (socket) => {
   console.log('User connected')
 
   socket.on('temperature', (temperature) => {
+    console.log(temperature)
     socket.broadcast.emit('temperature', temperature)
   })
 
