@@ -20,13 +20,7 @@ app.use(helmet())
 app.use(express.static(path.join(__dirname, '/public')))
 
 io.on('connection', (socket) => {
-  // socket.on('event', () => {
-  //   io.emit('event')
-  // })
-  console.log('User connected')
-
   socket.on('temperature', (temperature) => {
-    console.log(temperature)
     socket.broadcast.emit('temperature', temperature)
   })
 
