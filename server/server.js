@@ -43,6 +43,10 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('pressure', pressure)
   })
 
+  socket.on('altitude', (altitude) => {
+    socket.broadcast.emit('altitude', altitude)
+  })
+
   socket.on('position', (position) => {
     socket.broadcast.emit('position', position)
   })
