@@ -54,6 +54,10 @@ io.on('connection', (socket) => {
   socket.on('orientation', (orientation) => {
     socket.broadcast.emit('orientation', orientation)
   })
+
+  socket.on('data', (data) => {
+    socket.broadcast.emit('data', data)
+  })
 })
 
 app.use((err, req, res, next) => {
